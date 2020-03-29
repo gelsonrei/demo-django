@@ -75,13 +75,18 @@ WSGI_APPLICATION = 'common.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': os.environ.get('POSTGRESQL_ADDON_DB', None),
+    #     'USER': os.environ.get('POSTGRESQL_ADDON_USER', None),
+    #     'PASSWORD': os.environ.get('POSTGRESQL_ADDON_PASSWORD', None),
+    #     'HOST': os.environ.get('POSTGRESQL_ADDON_HOST', None),
+    #     'PORT': os.environ.get('POSTGRESQL_ADDON_PORT', 5432),
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRESQL_ADDON_DB', None),
-        'USER': os.environ.get('POSTGRESQL_ADDON_USER', None),
-        'PASSWORD': os.environ.get('POSTGRESQL_ADDON_PASSWORD', None),
-        'HOST': os.environ.get('POSTGRESQL_ADDON_HOST', None),
-        'PORT': os.environ.get('POSTGRESQL_ADDON_PORT', 5432),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
