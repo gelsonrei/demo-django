@@ -8,5 +8,9 @@
 			<img src="http://s.jesorsdu.li/Nr6G/cc.jpeg" width="266" height="105" />
 		</p>
 		<h1>Hello, world. Django 2.1 works on <a href="http://clever-cloud.com">Clever-Cloud</a>.</h1>
+
+		{% for doc in docs %}
+		<p> {{ doc }} </p>  
+	  	{% endfor %}
 	</body>
 </html>
